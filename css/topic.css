@@ -1,0 +1,755 @@
+@charset "UTF-8";
+/* ====================
+fadein
+======================= */
+.fadein {
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.fadein.animated {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+/* ====================
+main
+======================= */
+
+.main {
+    padding-bottom: 100px;
+}
+.hero__header {
+    background-color: var(--primary-beige);
+}
+
+.hero__visual-pc {
+    display: none;
+    width: 97.5%;
+    margin: 0 auto;
+}
+
+.hero__visual {
+    padding: 20px 0px 10px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero__visual::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 125%;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: var(--primary-brown);
+    opacity: 0.4;
+}
+
+.mainVisual__section {
+    height: auto;
+}
+
+.hero__visual-sp {
+    display: block;
+    width: 100%;
+}
+
+.hero__content {
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px 24px 20px;
+}
+
+.hero__title {
+    display: block;
+    font-size: 2rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 10px 0px 15px;
+}
+
+.hero__subtitle {
+    display: block;
+    font-size: 1.4rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.hero__lead {
+    display: block;
+    font-size: 1.2rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
+    padding: 25px 0px 50px;
+}
+
+.hero__sns {
+   width: 100%;
+   margin: 0 auto;
+}
+
+.hero__sns-sp {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero__sns-pc {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* メイン pc 376px以上で表示*/
+@media screen and (min-width: 376px) {
+    .hero__sns-sp {
+        width: 20%;
+    }
+
+    .hero__sns-pc {
+        width: 25%;
+    }
+}
+
+/* メイン pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .hero__visual {
+        padding: 30px 0px;
+    }
+
+    .hero__header {
+        min-height: 1000px;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+        line-height: 1.4;
+        letter-spacing: 0.5em;
+        padding: 20px 0px 15px;
+    }
+
+    .hero__subtitle {
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    .hero__lead {
+        font-size: 1.8rem;
+        padding: 20px 0px 50px;
+    }
+}
+
+/* メイン pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .hero__visual-pc {
+        display: block;
+        width: 97.5%;
+        margin: 0 auto;
+    }
+
+    .hero__visual-sp {
+        display: none;
+    }
+
+    .hero__visual {
+       width: 68%;
+    }
+
+    .hero__sns-sp {
+        width: 15.5%;
+    }
+
+    .hero__sns-pc {
+        width: 21%;
+    }
+
+    .hero__content {
+        padding: 0px 24px 100px;
+    }
+}
+
+
+/*  マヤ暦　トピック１ */
+.topic--01 {
+    padding: 100px 6.4% 100px;
+}
+
+.topic__container {
+    position: relative; 
+}
+
+.topic__image {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 130px;
+    height: auto;
+}
+
+.topic__body {
+    background-color: var(--primary-gray);
+    padding: 70px 30px 120px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;  
+}
+
+.topic__title h2 {
+    font-size: 1.4rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.7rem;
+}
+
+.topic__title {
+    padding-bottom: 30px;
+}
+
+.topic__text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0.6rem;
+}
+
+/* マヤ暦トピック1 pc 375px以上で表示*/
+@media screen and (min-width: 375px) {
+    .topic__title br {
+        display: none;
+    }
+}
+
+/* マヤ暦トピック1 pc 768px以上で表示*/
+@media screen and (min-width: 768px) {
+    .topic__body {
+        max-width: 1024px;
+    }
+
+    .topic__title {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .topic__image {
+        width: 25%;
+    }
+}
+
+/* マヤ暦トピック1 pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    br.pc-br1 {
+        display: block;
+    }
+
+    .topic__body {
+        padding: 50px 30px 30px;
+    }
+}
+    
+/* マヤ暦トピック1 pc 1200px以上で表示*/
+@media screen and (min-width: 1200px) {
+    .topic__image {
+        right: 0px;
+    }
+}
+
+/* マヤ暦トピック1 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .topic--01 {
+        padding: 130px 9.7% 200px;
+    }
+
+
+    .topic__container {
+        width: 1159px;
+        margin: 0 auto;
+    }
+
+    .topic__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        width: 85%;
+        height: auto;
+    }
+
+    .topic__title {
+        width: 60%;
+        max-width: 900px;
+        text-align: left;
+    }
+
+    .topic__title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+    }
+
+    .topic__text {
+        font-size: 1.6rem;
+        letter-spacing: 0.8rem;
+        line-height: 1.8;
+    }
+
+    .topic__image {
+        width: 290px;
+        right: 1px;
+        bottom: 1px;
+    }
+}
+
+
+/*  マヤ暦トピック2*/
+.topic--02 {
+    padding: 0px 6.4% 50px;
+    background-image: url(../images/mayareki-gainenbakimg-pc.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    height: auto;
+}
+
+.topic__main h2  {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Shippori Mincho B1;
+    line-height: 1.1;
+    letter-spacing: 0.9rem;
+    text-align: left;
+}
+
+.topic__main h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Shippori Mincho B1;
+    line-height: 1.6;
+    letter-spacing: 0.9rem;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.concept-grid {
+    padding: 30px 0px;
+}
+
+.concept-grid__list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.concept-grid__icon {
+    display: block;
+    max-width: 100%;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.concept-grid__item h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.concept-grid__item p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    line-height: 1.8;
+    padding-top: 8px;
+}
+
+/* マヤ暦トピック2 pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .topic--02 {
+        background-image: url(../images/mayareki-gainenbakimg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .topic__label {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .topic__main h2,h3 {
+        text-align: center;
+    }
+
+    .concept-grid__icon {
+        width: 95%;
+    }
+}
+
+/* マヤ暦トピック2 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .concept-grid {
+        padding: 0px 0px;
+    }
+
+    .topic--02 {
+        padding: 100px 9.7% 150px;
+    }
+    
+    .concept-grid__icon {
+        width: 98%;
+    }
+
+    .concept-grid__list {
+        justify-content: center;
+        gap: 65px;
+    }
+
+    .topic__main h2 {
+        font-size: 2rem;
+    }
+
+    .topic__main h3 {
+        font-size: 2rem;
+    }
+
+    .concept-grid__item h4 {
+        font-size: 1.8rem;
+        padding-top: 15px;
+    }
+
+    .concept-grid__item p {
+        font-size: 1.6rem;
+        padding-top: 15px;
+    }
+
+    .topic__label {
+        width: 1159px;
+        margin: 0 auto;
+    }
+}
+
+/* トピック3 */
+.topic__header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Shippori Mincho B1;
+    line-height: 1.1;
+    letter-spacing: 0.9rem;
+    text-align: left;
+    padding-top: 40px;
+}
+
+.essence-grid__item h3 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.essence-grid__item {
+    padding-top: 20px;
+}
+
+.essence-grid__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.essence-grid__img {
+    display: block;
+    max-width: 100%;
+    width: 107px;
+    height: auto;
+}
+
+
+/* マヤ暦トピック3 pc 768px以上で表示*/
+@media screen and (min-width: 768px) {
+    .essence-grid__img {
+        width: 90%;
+    }
+}
+
+/* マヤ暦トピック3 pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .topic__header br {
+        display: none;
+    }
+
+    .essence-grid__list {
+        flex-wrap: nowrap;
+    }
+
+    .topic__header h2 {
+    font-size: 2rem;
+    padding: 5px 0px;
+}
+
+}
+
+/* マヤ暦トピック3 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .topic__essence-title {
+        padding-top: 60px;
+        width: 1159px;
+        margin: 0 auto;
+    }
+
+    .essence-grid__item h3 {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+
+    .essence-grid__item {
+    padding-top: 50px;
+}
+
+    .essence-grid__img {
+        width: 217px;
+        height: 180px;
+    }
+
+    .essence-grid__list {
+        gap: 18px;
+    }
+}
+
+/* マヤ暦トピック4 */
+.keyword-grid__image-pc {
+    display: none;
+}
+
+.pc-br2 {
+    display: none;
+}
+
+.topic--04 {
+    padding: 80px 6.4% 30px;
+}
+
+.topic__intro {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    font-family: Shippori Mincho B1;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.keyword-grid__item {
+    background-color: var(--primary-beige);
+    width: 100%;
+    max-height: 530px;
+    height: auto;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border: 1px solid var(--primary-brown);
+}
+
+.keyword-grid__image-sp {
+    display: block;
+    max-width: 100%;
+    width: 280px;
+    height: auto;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+.keyword-grid__item p {
+    font-size: 1.2rem;
+    letter-spacing: 0.36rem;
+    line-height: 2.5;
+    width: 91%;
+    margin: 0 auto;
+    padding: 20px 0px 0px 2px;
+    font-weight: 500;
+}
+
+
+/* マヤ暦トピック4 pc 376px以上で表示*/
+@media screen and (min-width: 376px) {
+    .keyword-grid__item br {
+        display: none;
+    }
+}
+
+/* マヤ暦トピック4 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .pc-br2 {
+        display: block;
+    }
+    
+    .topic--04 {
+        max-width: 100%;
+        width: 100%;
+        padding: 80px 9.7% 150px;
+    }
+
+    .topic__intro {
+        font-size: 3rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .keyword-grid {
+        max-width: 1159px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+    }
+
+    .keyword-grid__item {
+        width: 40%;
+        margin-bottom: 0px;
+        padding-bottom: 50px;
+        max-height: none;
+        height: auto;
+    }
+
+    .keyword-grid__image-sp {
+       display: none;
+    }
+
+    .keyword-grid__image-pc {
+        display: block;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .keyword-grid__item p {
+        padding: 30px 0px 0px 2px;
+        font-size: 1.6rem;
+        line-height: 2;
+        width: 80%;
+    }
+}
+
+/* ハッピーマヤ暦 */
+
+/* デフォルト非表示 */
+.maya-intro__img-pc {
+    display: none;
+}
+
+.maya-intro {
+    padding: 80px 6.4% 20px;
+    background-color: var(--primary-beige);
+}
+
+.topic__main-visual {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.maya-intro__img-sp {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.maya-intro__content h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.36rem;
+    line-height: 1.6;
+    font-family: Shippori Mincho B1;
+    text-align: center;
+    color: var(--primary-green);
+    padding: 40px 0px
+}
+
+.maya-intro__text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.6rem;
+    line-height: 1.6;
+}
+
+.maya-intro__text {
+    padding-bottom: 30px;
+}
+
+/* ハッピーマヤ暦 pc 1200px以上で表示*/
+@media screen and (min-width: 1200px) {
+    .maya-intro__text {
+        padding: 0px 9.7% 30px;
+    }
+}
+
+
+/* ハッピーマヤ暦 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .maya-intro {
+        padding: 160px 9.7%;
+    }
+
+    .maya-intro__wrapper {
+        width: 1160px;
+        margin: 0 auto;
+    }
+
+    .maya-intro__containe {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .maya-intro__img-pc {
+        display: block;
+        max-width: 100%;
+        width: 90%;
+        height: auto;
+    }
+
+    .maya-intro__img-sp {
+        display: none;
+    }
+
+    .maya-intro__content h2 {
+        font-size: 2rem;
+        text-align: left;
+        padding: 0px 0px 20px;
+    }
+
+    .maya-intro__content {
+        width: 90%;
+    }
+
+    .maya-intro__text {
+        padding: 0px 0% 30px;
+    }
+
+    .maya-intro__text p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.8rem;
+        line-height: 1.8;
+    }
+}
+
+
+/* フッター 1440px*/
+@media screen and (min-width: 1440px) {
+.footer__item {
+    padding-top: 100px;
+}
+}
+    

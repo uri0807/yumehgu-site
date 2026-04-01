@@ -1,0 +1,797 @@
+@charset "UTF-8";
+/* ====================
+fadein
+======================= */
+.fadein {
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.fadein.animated {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+/* ====================
+main
+======================= */
+.main {
+    padding-bottom: 100px;
+}
+
+.event-hero__header {
+    background-color: var(--primary-beige);
+}
+
+.event-hero__image--pc {
+    display: none;
+}
+
+.event-hero__visual {
+    padding: 20px 0px 15px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.event-hero__visual::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 125%;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: var(--primary-brown);
+    opacity: 0.4;
+}
+
+.event-hero__image--sp {
+    display: block;
+    width: 100%;
+}
+
+.event-hero__content {
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 24px 15px;
+}
+
+.event-hero__title {
+    display: block;
+    font-size: 2rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 10px 0px 15px;
+}
+
+.event-hero__subtitle {
+    display: block;
+    font-size: 1.4rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.event-hero__lead {
+    display: block;
+    font-size: 1.2rem;
+    font-family: Shippori Mincho B1;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
+    padding: 25px 0px 30px;
+}
+
+.event-hero__sns {
+    max-width: 100%;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+/* メイン pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .event-hero__visual {
+        padding: 30px 0px;
+    }
+
+    .event-hero__header {
+        min-height: 900px;
+        padding-bottom: 90px;
+}
+
+    .event-hero__title {
+        font-size: 4rem;
+    }
+
+    .event-hero__subtitle {
+        font-size: 2rem;
+    }
+
+    .event-hero__lead {
+        font-size: 1.8rem;
+        padding: 70px 0px 25px
+    }
+
+    .event-hero__sns {
+        max-width: 100%;
+        width: 20%;
+        height: auto;
+        padding-top: 40px;
+    }
+
+    .event-hero__sns-image {
+        margin: 0 auto;
+    }
+}
+
+/* メイン pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) { 
+    .main {
+        padding-bottom: 200px;
+    }
+
+    .event-hero__header {
+        padding-bottom: 100px;
+    }
+
+    .event-hero__visual {
+       width: 68%;
+    }
+
+    .event-hero__image--sp {
+        display: none;
+    }
+
+    .event-hero__image--pc {
+        display: block;
+        width: 97.5%;
+        margin: 0 auto;
+    }
+
+
+    .event-hero__content {
+       max-width: 100%;
+       box-sizing: border-box;
+    }
+
+    .event-hero__sns-image   {
+        width: 65%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .event-hero__title {
+        padding: 50px 0px 20px;
+    }
+
+    .event-hero__lead {
+        padding: 70px 0px 30px;
+    }
+
+}
+
+
+/* concept */
+.concept {
+    height: auto;
+    padding: 100px 6.4%;
+}
+
+.concept__body {
+    letter-spacing: 0.3em;
+    padding: 0px 8px;
+}
+.concept__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: Shippori Mincho B1;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+    color: var(--primary-brown);
+}
+
+.concept__message-list {
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.concept__text {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+.concept__img {
+    max-width: 100%;
+    width: 198px;
+    margin: 0 auto;
+}
+
+/* concept pc 376px以上で表示*/
+@media screen and (min-width: 376px) { 
+    .concept__text br {
+        display: none;
+    }
+
+}
+
+/* concept pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .concept__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .concept__title {
+        text-align: left;
+    }
+
+    .concept__img {
+        width: 34%;
+        height: auto;
+    }
+
+    .concept__message-list {
+        width: 90%;
+        margin-left: 0px;
+    }
+}
+
+/* concept pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) { 
+    .concept {
+        padding: 100px 9.7% 150px;
+    }
+
+    .concept__container {
+        width: 1158px;
+        margin: 0 auto;
+    }
+
+    .concept__body {
+        width: 50%;
+    }
+    
+    .concept__title {
+        font-size: 1.8rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .concept__message-list {
+        width: 80%;
+    }
+
+    .concept__text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: 0.6rem;
+    }
+
+    .concept__img {
+        margin: 0px;
+    }
+
+     .concept__text br {
+        display: block;
+    }
+    
+}
+
+
+
+/* features */
+.features {
+    padding: 50px 6.4%;
+    height: auto;
+    background-color: var(--primary-beige);
+}
+
+.features__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Shippori Mincho B1;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.5em;
+    padding-bottom: 30px;
+}
+
+.features__item {
+    background-color: var(--primary-gray);
+    width: 100%;
+    height: auto;
+}
+.features__item-body {
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    padding: 30px 40px;
+}
+
+.features__item {
+    margin: 0px 0px 50px;
+}
+
+.features__summary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2.5;
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 5px;
+}
+
+/* features pc 376px以上で表示*/
+@media screen and (min-width: 376px) {
+    .features__text br {
+        display: none;
+    }
+}
+
+/* features pc 768px以上で表示*/
+@media screen and (min-width: 768px) { 
+    .features__item {
+        max-width: 1000px;
+        width: 90%;
+        height: auto;
+        margin: 0 auto 100px;
+        display: block;
+    }
+
+     .features__item-body {
+        text-align: left;
+        padding: 30px 10%;
+    }
+
+    .features__text br {
+        display: block;
+    }
+
+    .features__text {
+        width: 51%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* features pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .features__item {
+        max-width: 1000px;
+        width: 90%;
+        height: auto;
+        margin: 0 auto 100px;
+        display: block;
+    }
+
+    .features__item-body {
+        font-size: 1.2rem;
+        letter-spacing: 0.4em;
+        text-align: left;
+        padding: 60px 10%;
+    }
+
+    .features__text {
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+/* features pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .features {
+        padding: 50px 9.7%;
+    }
+/* 
+    .features__text {
+        width: 48%;
+    } */
+
+    .features__title {
+        font-size: 3rem;
+        letter-spacing: 0.5em;
+        padding-bottom: 80px;
+    }
+
+    .features__item-body {
+        font-size: 1.6rem;
+    }
+
+    .features__summary {
+        font-size: 1.6rem;
+        line-height: 2.5;
+        letter-spacing: 0.2em;
+        padding: 50px 5px;
+    }
+
+    .features__summary br {
+        display: none;
+    }
+
+    .pc-br {
+        display: inline !important;
+    }
+}
+
+
+/* ゆめはぐの強み*/
+
+/* SP（1024px以下）では非表示 */
+.benefits__grid-pc {
+    display: none;
+}
+
+.benefits {
+    padding: 100px 6.4%;
+    min-height: 974px;
+    max-width: 100%;
+    width: 100%;
+    background-image: url(../images/event-yumehagubakimg2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.benefits__hero-img {
+    width: 218px;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.benefits__text {
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 0.25em;
+    line-height: 2.5;
+}
+
+.benefits__visual {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.benefits__visual-img {
+    max-width: 100%;
+    width: 67%;
+    height: auto;
+}
+
+.benefits__visual {
+    padding-bottom: 50px;
+}
+
+.benefits__recommend-header {
+    width: 170px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+
+.benefits__grid-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.benefits__grid-item {
+    max-width: 100%;
+    width: 158px;
+    height: auto;
+}
+
+/* ゆめはぐの強み pc 768px以上で表示*/
+@media screen and (min-width: 768px) { 
+.benefits {
+    min-height: 800px;
+}
+
+.benefits__visual-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.benefits__text br {
+        display: none;
+    }
+
+.benefits__flex-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+.benefits__visual {
+        justify-content: center;
+    }
+
+.benefits__recommend-header {
+    max-width: 100%;
+    width: 20%;
+    height: auto;
+    margin-left: 10px;
+    padding-bottom: 30px;
+}
+}
+
+
+/* ゆめはぐの強み pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .benefits__message {
+        width: 50%;
+    }
+
+    .benefits__recommend-header {
+        max-width: 100%;
+        margin-left: 80px;
+        width: 20%;
+    }
+
+    .benefits__grid-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .benefits__grid-sp {
+        display: none;
+    }
+
+    .benefits__grid-item {
+        max-width: 100%;
+        width: 20%;
+        height: auto;
+    } 
+
+    .benefits__grid-pc {
+        display: block;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ゆめはぐの強み pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .benefits__hero-img {
+        width: 30%;
+        height: auto;
+    }
+
+    .benefits {
+        padding: 100px 9.7%;
+        min-height: auto;
+        background-image: url(../images/event-yumehagubakpcimg2.png);
+    }
+
+    .benefits__container {
+        width: 1158px;
+        margin: 0 auto;
+    }
+
+    .benefits__text {
+        padding-bottom: 30px;
+        font-size: 1.6rem;
+        letter-spacing: 0.3em;
+        line-height: 2.5;
+    }
+
+    .benefits__text br {
+        display: block;
+    }
+
+    .benefits__flex-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .benefits__visual-img {
+        max-width: 100%;
+        width: 460px;
+        height: auto;
+    }
+
+    .benefits__recommend-header {
+        width: 20%;
+        height: auto;
+    }
+
+    .benefits__grid-list {
+        padding-top: 20px;
+    }
+
+    .benefits__grid-pc {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+/* ゆめはぐの会費 */
+.membership {
+    padding: 0px 6.4%;
+    min-height: 1000px;
+    max-width: 100%;
+    width: 100%;
+    background-image: url(../images/yumehgu-kaihibakimg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.membership__content {
+    background-color: var(--primary-gray);
+    max-height: 1300px;
+    height: auto;
+}
+
+.membership__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: Shippori Mincho B1;
+    padding-bottom: 30px;
+    letter-spacing: 0.5em;
+}
+
+.membership__feature-list {
+    padding: 30px 10px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.membership__feature-item {
+    padding-bottom: 30px;
+}
+
+.membership__feature-img {
+    max-width: 100%;
+    width: 139px;
+    height: auto;
+}
+
+.membership__feature-name {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 1.8;
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+}
+
+.membership__message {
+    padding-bottom: 50px;
+}
+
+.membership__message-lead {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: Shippori Mincho B1;
+    letter-spacing: 0.7rem;
+    padding-bottom: 50px;
+    color: var(--primary-green);
+}
+
+.membership__message-body {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.6rem;
+    line-height: 2;
+    padding-bottom: 25px;
+}
+
+/* ゆめはぐ会費 pc 768px以上で表示*/
+@media screen and (min-width: 768px) {
+    .membership__feature-list {
+        padding: 50px 10px 50px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .membership__feature-img {
+        max-width: 100%;
+        width: 120px;
+        height: auto;
+    }
+
+    .membership {
+        min-height: auto;
+    }
+
+    .membership__title {
+        text-align: left;
+    }
+}
+
+/* ゆめはぐ会費 pc 1024px以上で表示*/
+@media screen and (min-width: 1024px) {
+    .membership__feature-img {
+        width: 160px;
+    }
+}
+
+/* ゆめはぐ会費 pc 1440px以上で表示*/
+@media screen and (min-width: 1440px) {
+    .membership {
+        padding: 200px 9.7% 0px;
+        background-image: url(../images/yumehgu-kaihibakpcimg.png);
+    }
+
+    .membership__container {
+        width: 1158px;
+        margin: 0 auto;
+    }
+    
+    .membership__title {
+        font-size: 3rem;
+        padding-bottom: 30px;
+        padding-left: 20px;
+    }
+
+    .membership__feature-list {
+        padding: 80px 0px 50px;
+    }
+
+    .membership__feature-img {
+        width: 200px;
+        height: auto;
+    }
+
+    .membership__feature-name {
+        font-size: 1.4rem;
+        padding-top: 10px;
+        letter-spacing: 0.5rem;
+    }
+
+    .membership__message-lead br {
+        display: none;
+    }
+
+    .membership__message-lead {
+        font-size: 1.8rem;
+        letter-spacing: 0.7rem;
+        padding-bottom: 40px;
+    }   
+
+    .membership__message-body {
+        font-size: 1.6rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .membership__message-body br {
+        display: none;
+    }
+
+    .membership__message-body,
+    .pc-br {
+        display: block;
+    }
+}

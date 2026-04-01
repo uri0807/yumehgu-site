@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/* ====================
+common
+======================= */
+:root{
+    --primary-brown:#62371C;
+    --primary-green:#3B7707;
+    --primary-beige:#FCFCF3;
+    --primary-gray:#F4EFE8;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px
+}
+
+body {
+    font-family: 
+        "Noto Sans JP", 
+        "Shippori Mincho B1", serif;
+    font-style: normal;
+    line-height: 1.5;
+    color: var(--primary-brown ,#62371C);
+    margin: 0;
+    padding: 0;
+}   
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* ====================
+header
+======================= */
+.header {
+    margin: 0 auto;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+.headerLogo {
+    width: 55px;
+    height: 46px;
+}
+
+
+/*  .nav初期表示 */
+.nav {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav__list {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--primary-beige); 
+    z-index: 90; 
+    padding-top: 25px;
+}
+
+.nav__header {
+    margin: 0 auto;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLogo {
+    width: 55px;
+    height: 46px;
+}
+
+.nav__item {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+    font-family:  "Shippori Mincho B1";
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav__item a {
+    display: inline-block;
+    transition: color 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+.nav__item a:hover {
+    font-weight: 700;
+    transform: translateY(-3px);
+    box-shadow: none;
+}
+
+.nav__item::before {
+    content: '';
+    display: inline-block;
+    top: 10%;
+    width: 23px;
+    height: 1px;
+    background-color: var(--primary-brown);
+    margin-bottom: 5px;
+    margin-right: 2px;
+}
+
+/* nav activ pc 999px以上で表示*/
+@media screen and (min-width: 999px) {
+    .header {
+       padding: 30px 150px;
+    }
+
+    .header__btn { 
+        display: none; 
+    }
+
+    .nav__header .headerLogo {
+        display: none;
+    }
+
+    .headerLogo {
+       width: 110px;
+       height: 90px;
+    }
+
+    .nav__btn {
+        display: none;
+    }
+
+    .nav__header {
+        display: none;
+    }
+
+    .nav {
+        transform: translateX(0);
+        position: static;
+        height: auto;
+    }
+
+    .nav__list {
+        display: flex;
+        height: auto;
+        position: static;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    .nav__listup {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        font-weight: 500;
+    }
+
+    .nav__item {
+        margin: 0 auto;
+    }
+
+    .nav__item::before {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__listup {
+       gap: 30px;
+    }
+
+    .header {
+        padding: 30px 100px 30px 120px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .header {
+        padding: 30px 170px;
+    }
+
+    .nav__listup {
+       gap: 50px;
+    }
+
+    .mainVisual__pc {
+        width: 1440px;
+    }
+
+}
+
+.footer__item {
+    color: var(--primary-brown);
+    padding: 0 24px;
+    font-family: Shippori Mincho B1;
+}
+
+.footer__itemtxt span {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.footer__itemtxt {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.4em;
+    font-weight: 700;
+}
+
+.menu {
+    padding: 30px 2px 0px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu__item {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.copy {
+    font-family: Noto Sans JP;
+    padding: 26px 0px 35px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .contact__btntxt {
+        font-size: 1.8rem;
+    }
+
+    .contact__btn {
+        border-radius: 20px;
+        left: 25px;
+        bottom: 15%;
+    }
+
+    .menu__list {
+        justify-content: center;
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section__contact {
+        margin: 80px 140px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section__contact {
+        margin: 180px 140px;
+    }
+
+    .contact__btn {
+        width: 500px;
+        max-width: 100%;
+        left: 50px;
+    }
+
+    .contact__btntxt {
+        font-size: 2.5rem;
+    }
+
+    .footer__itemtxt {
+        font-size: 1.8rem;
+    }
+
+    .footer__itemtxt span {
+        font-size: 1.4rem;
+    }
+
+    .menu__item {
+        font-size: 1.6rem;
+    }
+
+    .copy {
+        font-size: 1.4rem;
+    }
+}
+
